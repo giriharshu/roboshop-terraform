@@ -7,6 +7,10 @@ resource "aws_instance" "frontend" {
   }
 }
 
+output "frontend" {
+  value = aws_instance.frontend.private_ip
+}
+
 resource "aws_instance" "mangodb" {
   ami           = "ami-03265a0778a880afb"
   instance_type = "t3.micro"
