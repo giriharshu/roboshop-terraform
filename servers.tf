@@ -7,8 +7,9 @@ data "aws_ami" "centos" {
 output "ami_id" {
   value = data.aws_ami.centos.image_id
 }
+
 resource "aws_instance" "frontend" {
-  ami           = "data.aws_ami.centos.image_id"
+  ami           = data.aws_ami.centos.image_id
   instance_type = "t3.micro"
 
   tags = {
