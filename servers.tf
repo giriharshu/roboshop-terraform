@@ -207,4 +207,4 @@ resource "aws_instance" "instance" {
 #  type    = "A"
 #  ttl     = 30
 #  records = [aws_instance.dispatch.private_ip]
-}
+#}
